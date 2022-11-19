@@ -1,0 +1,142 @@
+<html>
+<head>
+	<title>Deep Learning Fundus Image Analysis for Early Detection of Diabetic Retinopathy</title>
+</head>
+<style>
+h1 {
+	border:5px double white;
+	font-size:40px;
+	text-align:center;
+	color:B87333;
+}
+h2 {
+	border:3px solid white;
+	background-color:#1B98E099;
+	color:white;
+}
+h3 {
+	border:2px solid white;
+	background-color:#288BA8;
+	
+}
+
+p1 {
+	font-size:30px;
+	color:white;
+}
+p3 {
+	font-size:20px;
+	color:white;
+}
+body {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNODyFa0xH_bFnRy9A2tDrTDzuCN4RXN3ZJw&usqp=CAU');
+  background-size: cover;
+}
+
+p {	margin-right:10px;
+	margin-bottom:10px;
+	padding-right:5px;
+	padding-left:5px;
+	float:right;
+	font-size:10px;
+}
+div {	padding-left:5px;
+}
+label {
+	font-size:15px;
+	text-align:centre;
+}
+
+li {
+  list-style-type: square;
+}
+
+table {
+	border-size:10px;
+	text-align:justify;
+	color:white;
+	border-spacing: 30px;
+	
+}
+#rad{
+	border-radius:50%;
+}
+form {
+	padding-left:10px;
+	display:grid;
+}
+
+</style>
+<body>
+<h3>
+	<div>
+	<p1>
+	  Online Diabetic Retinopathy Classifier
+	<p>
+		<button ><a href="{{url_for('home')}}" style="text-decoration: none;">Home</button>
+		<button onclick="alert('Exsisting page');">Register</button>
+		<button><a href="{{url_for('login')}}" style="text-decoration: none;">Login</a></button>
+		<button onclick="alert('mail your issues to diabeticretinopathyonlineprediction@gmail.com')">Contact us</button>
+	</p>
+	</p1>
+	</div>
+</h3>
+<h1>Diabetic Retinopathy Detection</h1>
+<h5 style="text-align:center"><img id='rad' src="{{imgg3}}" height=50px;width=50px;><br><br></h5>
+<h2>
+<form method = "POST" action = "{{url_for('addrec')}}">
+<div style="border:2px dotted;text-align:center;"><i>Register</i></div>
+
+<table>
+<tr>
+	<th>
+		<label>Name</label><br>
+		<input type="text" name="NAME" placeholder="name" required>
+	</th><br>
+	<th>
+		<label>email</label><br>
+		<input type="email" name="EMAIL" placeholder="email" required>
+	</th><br>
+	<th>
+		<label>Phone number</label><br>
+		<input type="text" name="PHONE NUMBER" placeholder="phone number" required>
+	</th><br>
+</tr>
+<tr>	
+	<th>
+		<div>
+			<label>Gender</label><br>
+			<input type="radio" name="Gender"><label>Male</label><br>
+			<input type="radio" name="Gender"><label>Female</label><br>
+		</div>
+	</th>
+	<th>
+		<div>
+			<label>Has Diabetics???</label><br>
+			<input type="radio" name="Has Diabetics???"><label>Yes</label><br>
+			<input type="radio" name="Has Diabetics???"><label>No</label><br><br>
+		</div>
+	</th>
+	<th>
+		<div>
+			<label>Date of Birth</label><br>
+			<input type="date" name="Date of Birth"><br>
+		</div>
+	</th>
+</tr>	
+	
+</table>
+<h5 style="text-align:center">
+	<div>
+		<label>Set Password</label><br>
+		<input type="password" name="PASSWORD" placeholder="password" required><br>
+	</div><br>
+	<div>
+		<input type="checkbox" required>I Accept the terms and conditions<label></label>
+	</div>
+</h5>
+<button type = "submit">REGISTER</button>
+	</form>
+</h2>
+</body>
+</html>
